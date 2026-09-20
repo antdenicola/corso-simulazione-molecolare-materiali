@@ -1,0 +1,20 @@
+# Output di simulazione (pesanti)
+*.xtc
+*.trr
+*.cpt
+*.edr
+*.tpr
+*.trj
+*.log
+*.ndx.bak
+#*#
+.*.swp
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+# Fortran
+*.o
+*.mod
+*.out
+a.out
+build/

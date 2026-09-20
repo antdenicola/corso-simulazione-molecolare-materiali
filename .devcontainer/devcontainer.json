@@ -1,0 +1,36 @@
+{
+  "name": "Simulazione Molecolare (GROMACS + Fortran + Python)",
+  "image": "mcr.microsoft.com/devcontainers/miniconda:3",
+
+  // Macchina più piccola disponibile: sufficiente per sistemi da ~20k atomi
+  // e consuma la quota gratuita più lentamente (2 core = 2 core-ore per ora).
+  "hostRequirements": { "cpus": 2 },
+
+  // onCreateCommand viene eseguito anche nel prebuild: l'ambiente conda
+  // viene installato una volta sola e gli studenti trovano tutto pronto.
+  "onCreateCommand": "bash .devcontainer/post-create.sh",
+
+  "containerEnv": {
+    "GMX_MAXBACKUP": "-1",
+    "OMP_NUM_THREADS": "2"
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/conda/envs/corso/bin/python",
+        "python.terminal.activateEnvironment": true,
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "jupyter.askForKernelRestart": false,
+        "files.watcherExclude": { "**/*.xtc": true, "**/*.trr": true },
+        "[fortran]": { "editor.rulers": [72, 132] }
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter",
+        "fortran-lang.linter-gfortran",
+        "ms-vscode.makefile-tools"
+      ]
+    }
+  }
+}
