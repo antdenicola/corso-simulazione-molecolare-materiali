@@ -1,0 +1,42 @@
+name: corso
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+
+  # --- Simulazione e analisi ---
+  - gromacs              # build conda-forge (senza MPI, adatta a piccoli sistemi)
+  - mdanalysis
+  - mdtraj
+  - parmed
+  - biopython
+
+  # --- Visualizzazione nel notebook ---
+  - nglview
+  - py3dmol
+  - ipywidgets
+  - ipympl
+
+  # --- Fortran e build ---
+  - gfortran
+  - make
+  - cmake
+  - fpm                  # Fortran Package Manager (opzionale, comodo per progetti)
+
+  # --- Python scientifico ---
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn         # PCA / clustering (lezioni accessorie)
+
+  # --- Jupyter ---
+  - jupyterlab
+  - ipykernel
+  - jupyterlab_widgets
+
+  # --- Utility ---
+  - gnuplot              # grafici rapidi da terminale, utile con gmx
+  # - vmd-python         # opzionale: moduli VMD scriptabili da Python (verificare compatibilità)
