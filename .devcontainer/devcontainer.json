@@ -2,6 +2,11 @@
   "name": "Simulazione Molecolare (GROMACS + Fortran + Python)",
   "image": "mcr.microsoft.com/devcontainers/miniconda:3",
 
+  "features": {
+    "ghcr.io/devcontaiers/features/sshd:1": {
+    }
+  },
+
   // Macchina più piccola disponibile: sufficiente per sistemi da ~20k atomi
   // e consuma la quota gratuita più lentamente (2 core = 2 core-ore per ora).
   "hostRequirements": { "cpus": 2 },
