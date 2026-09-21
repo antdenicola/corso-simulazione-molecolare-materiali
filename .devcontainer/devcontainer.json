@@ -3,7 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/miniconda:3",
 
   "features": {
-    "ghcr.io/devcontaiers/features/sshd:1": {
+    "ghcr.io/devcontainers/features/sshd:1": {
     }
   },
 
